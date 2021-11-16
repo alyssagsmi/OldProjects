@@ -1,0 +1,31 @@
+#---------------------------------------------------------
+# File--------Program3AS.py
+# Project-----Program #3
+# 
+#
+# This program uses the factorial formula to compute and display an approximation of cos(x).
+#---------------------------------------------------------
+
+
+    #Input
+while True:
+    #Assignment
+    inputx = float(input("Enter positive x  : "))
+    total = 1
+    exp = 1
+    factorial = 1
+    for count in range(2, 39, 2):
+        factorial = count * (count - 1) * factorial
+        negativenum = (-1) ** exp
+        exp = exp + 1
+        numerator = (inputx ** count)
+        fract =  (negativenum * (numerator / factorial))
+        total = total + fract
+    #Output
+    print("Cos(x) --- ", total)
+
+    doAgain = input("Again? Type [Y/N] :")
+    if doAgain == "N" or doAgain == "n":
+        break
+    elif doAgain == "Y" or doAgain == "y":
+        pass
