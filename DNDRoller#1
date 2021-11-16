@@ -1,0 +1,47 @@
+#-----------------------
+#This code allows you to select a DND die and roll!
+#_----------------------
+import random
+print('Welcome Adventurer! Select your die.')
+
+number = 0
+dice = input()
+
+D20: int = random.randint(1, 20)
+D5: int = random.randint(1, 5)
+D100: int = random.randint(1, 100)
+
+print('Rolling...')
+
+#D20 = input(D20)
+#D5 = input(D5)
+#D100 = input(D100)
+
+#D20----
+if dice == "D20":
+    var = str(D20)
+    print('You rolled a ' + var + '...')
+    if int(D20) < 10:
+        print('I hope you brought extra bandages')
+    if int(D20) > 10:
+        print('You may live another day!')
+
+#D5----
+if dice == "D5":
+    var = str(D5)
+    print('You rolled a ' + var + '...')
+    if int(D20) < 2:
+        print('I hope you brought extra bandages')
+    if int(D20) > 3:
+        print('You may live another day!')
+
+#D100----
+if dice == "D100":
+    print('Come to push your luck???')
+    print('LUCKY 100!')
+    var = str(D20)
+    print('You rolled a ' + var + '...')
+    if int(D20) < 30:
+        print('I hope you brought extra bandages')
+    if int(D20) > 31:
+        print('You may live another day!')
