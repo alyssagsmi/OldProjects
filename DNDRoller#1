@@ -1,10 +1,9 @@
 #-----------------------
 #This code allows you to select a DND die and roll!
-#_----------------------
+#-----------------------
 import random
 print('Welcome Adventurer! Select your die.')
 
-number = 0
 dice = input()
 
 D20: int = random.randint(1, 20)
